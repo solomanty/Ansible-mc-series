@@ -1,4 +1,4 @@
-#resource block
+#resource block; Control node
 resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.my_instance_type
@@ -12,6 +12,7 @@ resource "aws_instance" "ubuntu" {
   }
 }
 
+#resource- host nodes
 resource "aws_instance" "ubuntu-hosts" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.my_instance_type
@@ -24,6 +25,7 @@ resource "aws_instance" "ubuntu-hosts" {
   }
 }
 
+#resource- host node
 resource "aws_instance" "rhel-hosts" {
   ami           = data.aws_ami.rhel.id
   instance_type = var.my_instance_type
